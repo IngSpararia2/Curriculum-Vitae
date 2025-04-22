@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Parariá - Currículum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+        
+        .section-title {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timeline-item {
+            border-left: 2px solid var(--secondary-color);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--secondary-color);
+            position: absolute;
+            left: -8.5px;
+            top: 0;
+            border-radius: 50%;
+        }
+        
+        .tech-icon {
+            font-size: 2rem;
+            margin: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .carousel-container {
+            position: sticky;
+            top: 1rem;
+            margin-left: 2rem;
+        }
+
+        .certificate-btn {
+            margin-top: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header text-center">
+        <img src="profile-placeholder.jpg" alt="Foto de perfil" class="profile-img mb-3">
+        <h1>Samuel Parariá</h1>
+        <h3>Ingeniero Civil & Desarrollador Full Stack</h3>
+        <div class="mt-3">
+            <a href="mailto:ingspararia@gmail.com" class="text-white mx-2"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+573194275450" class="text-white mx-2"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/tu-usuario" class="text-white mx-2"><i class="fab fa-github"></i></a>
+            <a href="https://mostwantedapp.onrender.com" class="text-white mx-2"><i class="fas fa-globe"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- Columna principal -->
+            <div>
+                <!-- Perfil Profesional -->
+                <section class="mb-5">
+                    <div class="card bg-light mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Perfil Profesional</h5>
+                            <p class="card-text">Ingeniero Civil próximo a graduarse con experiencia en administración logística, gestión de proyectos y organización documental. Especializado en optimización de procesos administrativos y operativos, combinando habilidades técnicas con enfoque metódico orientado al cumplimiento de objetivos empresariales.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experiencia Laboral -->
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fas fa-briefcase me-2"></i>Experiencia Laboral</h2>
+                    
+                    <!-- Experiencia Django -->
+                    <div class="timeline-item">
+                        <h4>Desarrollador Django Full Stack</h4>
+                        <p class="text-muted">Most Wanted Jeans | Ene 2025 - Actualidad</p>
+                        <h5>Proyecto: MostWantedApp - Sistema Integral de Gestión Empresarial</h5>
+                        <ul>
+                            <li>Diseñar y desarrollar arquitectura escalable basada en Django Framework para gestión de inventarios, ventas y logística</li>
+                            <li>Implementar sistema de autenticación JWT con roles jerárquicos (administradores, tiendas, despachos) utilizando Django Authentication System</li>
+                            <li>Construir sistema de expedición de factura personalizada para las ventas de la empresa</li>
+                            <li>Optimizar consultas a base de datos en interfaces gráficas dentro de la web con reportes en PDF</li>
+                            <li>Implementar sistema de reporting con gráficos interactivos usando Chart.js y exportación a formatos CSV/Excel</li>
+                            <li>Configurar pipeline CI/CD con GitHub Actions para despliegue automático en Render</li>
+                            <li>Diseñar interfaz responsive utilizando Bootstrap 5 y Tailwind CSS con componentes dinámicos en Alpine.js</li>
+                            <li>Implementar validación de datos en backend mediante Django Validators y serializadores personalizados</li>
+                            <li>Integrar sistema de búsqueda avanzada con filtros dinámicos utilizando Django Filter</li>
+                        </ul>
+                        <div class="mt-3">
+                            <a href="https://github.com/tu-usuario/mostwantedapp" class="btn btn-primary btn-sm me-2">
+                                <i class="fab fa-github"></i> Repositorio
+                            </a>
+                            <a href="https://mostwantedapp.onrender.com" class="btn btn-success btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Otras Experiencias -->
+                    <div class="timeline-item">
+                        <h4>Auxiliar de Ingeniería en Diseño Hidráulico</h4>
+                        <p class="text-muted">Aguas Kpital Cúcuta | Sep 2024 - Dic 2024</p>
+                        <ul>
+                            <li>Administración de actividades de interventoría, incluyendo levantamiento de actas y organización de documentación técnica</li>
+                            <li>Gestión de permisos y autorizaciones de cierre de vías, y elaboración de cronogramas y presupuestos para proyectos hidráulicos</li>
+                            <li>Coordinación de equipos y recursos para garantizar el desarrollo eficiente de actividades de obra</li>
+                            <li>Diseño hidráulico de redes de acueducto y alcantarillado, incluyendo planos en AutoCAD y cálculos detallados mediante Excel avanzado</li>
+                            <li>Cálculo de presupuestos y cronogramas de actividades para proyectos de redes hidráulicas y alcantarillado</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Auxiliar de Ingeniería</h4>
+                        <p class="text-muted">Constructora RM | Ago 2024 | Cúcuta</p>
+                        <ul>
+                            <li>Gestión administrativa de recursos logísticos para proyectos constructivos, supervisando el trabajo de 48 obreros</li>
+                            <li>Planificación y programación de cronogramas de actividades de campo, incluyendo el uso de maquinaria y suministros</li>
+                            <li>Control y seguimiento de documentación técnica y operativa relacionada con procesos constructivos</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Analista de Inventario y Software</h4>
+                        <p class="text-muted">Most Wanted Jeans | Ene 2024 - Jul 2024</p>
+                        <ul>
+                            <li>Desarrollo de herramientas administrativas en Excel avanzado para la gestión de inventarios y control de información empresarial</li>
+                            <li>Automatizar este sistema mediante la aplicación herramientas del software Microsoft Office Excel, SQL y Python</li>
+                            <li>Supervisión de datos relacionados con maquinaria e insumos, optimizando procesos logísticos</li>
+                            <li>Organización de reportes administrativos y cálculos de comisiones para más de 100 empleados</li>
+                            <li>Diseñar un sistema automatizado de generación de reportes en PDF para nómina semanal de empleados</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Educación -->
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap me-2"></i>Educación</h2>
+                    <div class="timeline-item">
+                        <h4>Ingeniero Civil
+                            <a href="certificado_ingenieria.pdf" class="btn btn-outline-primary certificate-btn" download>
+                                <i class="fas fa-download"></i> Certificado
+                            </a>
+                        </h4>
+                        <p class="text-muted">Universidad Francisco de Paula Santander | 2025</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Costos y Presupuestos para Construcción
+                            <a href="certificado_costos.pdf" class="btn btn-outline-primary certificate-btn" download>
+                                <i class="fas fa-download"></i> Certificado
+                            </a>
+                        </h4>
+                        <p class="text-muted">SENA | 2021</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Construcción de Estructuras en Concreto
+                            <a href="certificado_estructuras.pdf" class="btn btn-outline-primary certificate-btn" download>
+                                <i class="fas fa-download"></i> Certificado
+                            </a>
+                        </h4>
+                        <p class="text-muted">SENA | 2022</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Tendencias Topográficas e Innovación
+                            <a href="certificado_topografia.pdf" class="btn btn-outline-primary certificate-btn" download>
+                                <i class="fas fa-download"></i> Certificado
+                            </a>
+                        </h4>
+                        <p class="text-muted">Universidad Francisco de Paula Santander | 2022</p>
+                    </div>
+                </section>
+
+                <!-- Habilidades Técnicas -->
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fas fa-code me-2"></i>Habilidades Técnicas</h2>
+                    <div class="text-center">
+                        <i class="tech-icon fab fa-python" title="Python"></i>
+                        <i class="tech-icon fab fa-js" title="JavaScript"></i>
+                        <i class="tech-icon fab fa-html5" title="HTML5"></i>
+                        <i class="tech-icon fab fa-css3-alt" title="CSS3"></i>
+                        <i class="tech-icon fas fa-drafting-compass" title="CAD"></i>
+                        <i class="tech-icon fas fa-chart-line" title="Análisis"></i>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Django Framework y Django ORM</li>
+                                <li>AutoCAD, Civil 3D, ArcGIS, QGIS</li>
+                                <li>Excel avanzado con VBA y Python</li>
+                                <li>Desarrollo de bases de datos SQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Git y GitHub</li>
+                                <li>Análisis y cálculo de presupuestos</li>
+                                <li>Optimización de procesos administrativos</li>
+                                <li>Planificación de recursos y logística</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Proyectos -->
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fas fa-project-diagram me-2"></i>Proyectos Relevantes</h2>
+                    
+                    <div class="project-card">
+                        <h4>Desarrollo de MostWantedApp</h4>
+                        <ul>
+                            <li>Sistema integral de gestión empresarial</li>
+                            <li>Tecnologías: Django, PostgreSQL, Bootstrap</li>
+                            <li>Generación automatizada de reportes PDF/Excel</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-card">
+                        <h4>Mezclas Asfálticas Modificadas con PET</h4>
+                        <ul>
+                            <li>Proyecto ganador en RedColsi Regional Pamplona</li>
+                            <li>Presentación nacional en evento RedColsi Barranquilla</li>
+                            <li>Análisis técnico-ambiental comparativo</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-card">
+                        <h4>Mezcla Hidráulica con Fibras Textiles</h4>
+                        <ul>
+                            <li>Investigación con más de 100 muestras de laboratorio</li>
+                            <li>Presentado en encuentro de semilleros UNIPAMPLONA</li>
+                            <li>En espera de publicación científica</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Idiomas -->
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fas fa-language me-2"></i>Idiomas</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Español</h5>
+                                    <p class="text-muted">Lengua materna</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Inglés</h5>
+                                    <p class="text-muted">Nivel avanzado</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Francés</h5>
+                                    <p class="text-muted">Nivel principiante</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Habilidades Blandas -->
+                <section class="mb-5">
+                    <h2 class="section-title"><i class="fas fa-users me-2"></i>Habilidades Blandas</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Gestión de equipos y liderazgo</li>
+                                <li>Resolución de problemas técnicos</li>
+                                <li>Comunicación asertiva y efectiva</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Redacción de informes técnicos</li>
+                                <li>Planificación estratégica</li>
+                                <li>Toma de decisiones operativas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Carrusel Lateral -->
+            <div class="carousel-container">
+                <div id="cvCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="foto-profesional.jpg" class="d-block w-100" alt="Foto profesional">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="certificacion-django.jpg" class="d-block w-100" alt="Certificación Django">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="proyecto-hidraulico.jpg" class="d-block w-100" alt="Proyecto hidráulico">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#cvCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#cvCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
